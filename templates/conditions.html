@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--  
+<center>
+    {% if a > b %}
+    <h1> a is graterthan b</h1>
+    {% endif %}
+</center>
+-->
+<!--  
+<center>
+    {% if a > b %}
+    <h1> a is graterthan b</h1>
+    {% else %}
+    <h1> b is graterthan a</h1>
+    {% endif %}
+</center>
+-->
+<!--  
+    <center>
+        {% if a > b and a > c %}
+        <h1> a is graterthan b,c</h1>
+        {% elif b > c %}
+        <h1> b is graterthan a,c</h1>
+        {% else %}
+        <h1> c is gratethan a,b</h1>
+        {% endif %}
+    </center> 
+-->
+
+    <center>
+        {% if a > b %}
+        {% if a > c %}
+        <h1> a is graterthan b and c</h1>
+        {% else %}
+        <h1> c is graterthan b and a</h1>
+        {% endif %}
+        {% else %}
+        {% if b > c %}
+        <h1> b is graterthan b and c</h1>
+        {% else% }
+        <h1> c is gratethan a and b </h1>
+        {% endif %}
+        {% endif %}
+    
+    </center>
+
+    <center>
+    <h1><a href="{% url 'loop' %}"> go to loop </a></h1>
+</center>
+</body>
+</html>
